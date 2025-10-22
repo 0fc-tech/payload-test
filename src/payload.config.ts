@@ -64,6 +64,10 @@ export default buildConfig({
       connectionString: process.env.POSTGRES_URL || '',
     },
   }),
+  localization:{
+    locales: ['fr', 'en',], // required
+    defaultLocale: 'fr', // required
+  },
   collections: [Pages, Posts, Media, Categories, Users],
   cors: [getServerSideURL()].filter(Boolean),
   globals: [Header, Footer],
